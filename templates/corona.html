@@ -1,0 +1,84 @@
+{% extends 'layout.html' %}
+{% block body %}
+
+
+
+
+<main role="main" class="main">
+
+  <section class="jumbotron mt-2 p-2">
+
+    <div class="container-fluid w-100">
+
+    {% if inf==1 %}
+    <div class="container-fluid w-100 danger">
+      <span>Stay Safe, You are prone to Corona Virus</span>
+    </div>
+
+    {% elif inf==0 %}
+    <div class="container-fluid w-100 safe">
+      <span>Relax ! you are not prone to Corona Virus till now, still be Safe</span>
+    </div>
+
+    {% endif %}
+</div>
+
+    <div  style="height: 440px;" class="container mt-0 p-0">
+      <h1  style="text-align: center;">Corona Prediction</h1>
+     <!--  <p class="lead text-muted">Something short and leading about the collection below—its contents, the creator, etc. Make it short and sweet, but not too short so folks don’t simply skip over it entirely.</p> -->
+
+ <form action="/coronapredict" method="post">
+
+    <div class="form-group">
+      <input type="text" class="form-control" id="feaver" name="feaver" placeholder="Enter Feaver Value" required>
+
+    </div>
+
+    <div class="form-group">
+      <input type="text" class="form-control" id="age" name="age" placeholder="Enter Age Value" required>
+    </div>
+
+    <div class="form-group">
+      <select custom-select class="form-control custom-select" id="pain" name="pain">
+        <option selected=true>Body Pain</option>
+        <option value="1">No Pain</option>
+        <option value="0">severe pain</option>
+    </select>  
+    </div>
+
+    <div class="form-group">
+      <select custom-select class="form-control custom-select" id="runnynose" name="runnynose">
+        <option selected=true>Runny Nose</option>
+        <option value="1">YES</option>
+        <option value="0">NO</option>
+    </select>
+    </div>
+
+    <div style="margin-bottom: 2%;" class="form-group">
+      <select custom-select class="form-control custom-select" id="diffbreath" name="diffbreath">
+        <option>Breathe Difficulty</option>
+        <option value="-1">No Difficulty</option>
+        <option value="0">little</option>
+        <option value="1">severe</option>
+    </select> 
+   </div>
+
+  
+  <input type="submit" class="btn btn-success" value="Predict">
+  </form>
+
+    </div>
+
+    
+
+
+
+
+  </section>
+
+ 
+ 
+</main>
+
+
+ {% endblock %}

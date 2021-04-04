@@ -1,0 +1,80 @@
+{% extends 'layout.html' %}
+{% block body %}
+
+<style>
+ 
+
+</style>
+<main role="main" class="main">
+
+  <section class="jumbotron mt-2 p-1">
+  
+			{% if prediction==1 %}
+      <div class="container-fluid w-100 danger">
+       <span >Take Care, You are prone to diabetes</span> 
+</div>
+
+			{% elif prediction==0 %}
+      <div class="container-fluid w-100 safe">
+      <span >Relax ! you are not prone to diabetes till now</span>
+</div>
+
+			{% endif %}
+	
+
+    <div class="container mt-0 p-0">
+      <h1  style="text-align: center;">Diabetic Prediction</h1>
+     <!--  <p class="lead text-muted">Something short and leading about the collection below—its contents, the creator, etc. Make it short and sweet, but not too short so folks don’t simply skip over it entirely.</p> -->
+
+ <form action="/predictdiabetic" method="post">
+
+    <div class="form-group">
+      <input type="number"  class="form-control" id="pregnancies"  name="pregnancies" placeholder="Number of Pregnancies eg. 0">
+    </div>
+
+    <div class="form-group">
+      <input type="number" class="form-control" id="glucose" name="glucose" placeholder="Glucose (mg/dL) eg. 80">
+    </div>
+
+    <div class="form-group">
+      <input type="number" class="form-control" id="bloodpressure" name="bloodpressure" placeholder="Blood Pressure (mmHg) eg. 80">
+    </div>
+
+    <div class="form-group">
+      <input type="number" class="form-control" id="skinthickness"  name="skinthickness" placeholder="Skin Thickness (mm) eg. 20">
+    </div>
+
+    <div class="form-group">
+      <input type="number" class="form-control" id="insulin" name="insulin" placeholder="Insulin Level (IU/mL) eg. 80">
+    </div>
+
+    <div class="form-group">
+      <input type="number" class="form-control" id="bmi" name="bmi" placeholder="Body Mass Index (kg/m²) eg. 23.1">
+    </div>
+
+    <div class="form-group">
+      <input type="number" class="form-control" id="dpf" name="dpf" placeholder="Diabetes Pedigree Function eg. 0.52">
+    </div>
+
+      <div class="form-group">
+      <input type="number" class="form-control" id="age" name="age" placeholder="Age (years) eg. 34">
+    </div>
+
+  <input type="submit" class="btn btn-success" value="Predict">
+  </form>
+
+    </div>
+
+    		
+
+
+
+
+  </section>
+
+  </main>
+
+
+
+
+ {% endblock %}

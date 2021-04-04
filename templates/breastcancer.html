@@ -1,0 +1,78 @@
+{% extends 'layout.html' %}
+{% block body %}
+
+<style type="text/css">
+  form input {
+    padding: 10px;
+    margin: 5px;
+  }
+</style>
+
+<main role="main" class="main">
+
+  <section class="jumbotron mt-2 p-1">
+
+    {% if prediction_text==1 %}
+    <div class="container-fluid w-100 danger">
+      <span>Take Care, You are prone to Cancer</span>
+    </div>
+
+    {% elif prediction_text==0 %}
+    <div class="container-fluid w-100 safe">
+      <span>Relax ! you are not prone to Cancer till now</span>
+    </div>
+
+    {% endif %}
+
+
+
+    <div style="height:450px" class="container-fluid w-100 mt-0 p-0">
+      <h1 style="text-align: center;">Breast Cancer Prediction</h1>
+      <form action="/predictbc" method="post">
+
+
+        <div style="margin-top: 5%;" class="form-group">
+          <input type="text" class="form-control" name="mean_texture" placeholder="mean texture" required="required" />
+        </div>
+        <div class="form-group">
+          <input type="text" class="form-control" name="mean_perimeter" placeholder="mean perimeter"
+            required="required" />
+        </div>
+        <div class="form-group" style="margin-bottom: 2%;">
+
+          <input type="text" class="form-control" name="mean_smoothness" placeholder="mean smoothness"
+            required="required" />
+        </div>
+        <div class="form-group">
+
+          <!-- Show button -->
+
+          <!-- <a class="button_css" href="http://bit.ly/breast-cancer-ml-project" target="_blank" rel="nofollow noopener"> -->
+          <button type="submit" class="btn btn-success"><strong>Predict Cancer</strong></button>
+          <!-- </a> -->
+
+        </div>
+
+
+
+      </form>
+    
+
+    </div>
+    <!-- 
+      <div class="container-fluid w-50">
+			{% if prediction_text== 1 %}
+
+				<h3>Prediction: <span class='danger'>Great You Have No breast cancer.</span></h3>
+
+			{% elif prediction_text== 0 %}
+				<h3>Prediction: <span class='safe'>Opps!! You Have breast cancer.</span></h3>
+
+			{% endif %}
+		</div>  -->
+
+  </section>
+</main>
+
+
+{% endblock %}

@@ -1,0 +1,144 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
+    <meta name="generator" content="Jekyll v4.1.1">
+    <title>Smart Health Care</title>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+   <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"> -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    <!-- Bootstrap core CSS -->
+<!--<link href="{{ url_for('static',filename='css/bootstrap.min.css')}} " rel="stylesheet">-->
+
+
+
+    <style>
+      .bd-placeholder-img {
+        font-size: 1.125rem;
+        text-anchor: middle;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+      }
+      .form-control{
+        margin-left: 25%;
+        width: 50%
+      }
+      .btn-success{
+        margin-left: 45%
+      }
+      .head{
+        margin-left: 37%;
+    /* align-self: center; */
+    font-size: 40px;
+    font-family: -webkit-pictograph;
+      }
+
+  h1{
+    font-size: 35px;
+    font-family: -webkit-pictograph;
+    margin: 4px 0 20px 0px;
+
+
+  }
+.jumbotron {
+  margin-bottom: 0 !important;
+  background: #f8f9fa !important;
+
+}
+
+
+      .main{
+        margin-top: -1%  !important;
+      }
+      .danger{
+  background-color: red;
+  color: white;
+  font-size: 20px;
+  text-align: center;
+}
+
+.safe{
+  background-color:green;
+  color: white;
+  font-size: 20px;
+  text-align: center;
+
+}
+     .text-muted{
+       border-top: 2px solid #151515;
+       border-bottom: 2px solid #151515;
+       margin-bottom: 3%;
+     }
+     
+      @media (min-width: 768px) {
+        .bd-placeholder-img-lg {
+          font-size: 3.5rem;
+        }
+      }
+     
+    </style>
+    <!-- Custom styles for this template -->
+    <link href="{{ url_for('static',filename='css/album.css')}} " rel="stylesheet">
+  </head>
+  <body>
+    <header>
+  <div class="collapse bg-dark" id="navbarHeader">
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-8 col-md-7 py-4">
+          <h4 class="text-white">About</h4>
+          <p class="text-muted">The word health refers to a state of complete emotional and physical well-being.
+          Healthcare exists to help people maintain this optimal state of health.</p>
+          <p class="text-muted"> Health is a state of physical, mental and social well-being.Health is an essential part of our life. It affects our lives to the greatest extent.<br>
+    Being healthy and active is always an advantage for us.</p>
+        </div>
+        
+          
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="navbar navbar-dark bg-dark shadow-sm">
+    <div class="container d-flex justify-content-between">
+      <a href="/" class="navbar-brand d-flex align-items-center head">
+        
+        <strong>Smart Health Care</strong>
+      </a>
+      <button class="navbar-toggler" style="margin-right: -9%;padding: 10px 10px 10px 10px;" type="button" data-toggle="collapse" data-target="#navbarHeader" aria-controls="navbarHeader" aria-expanded="false" aria-label="Toggle navigation">
+        <!-- <span class="navbar-toggler-icon"></span> -->
+        <span style=" font-size: 25px;">ABOUT</span>
+
+      </button>
+    </div>
+  </div>
+</header>
+
+
+{% block body %} {% endblock %}
+
+
+
+<footer  class="text-muted bg-light">
+  <div class="container" >
+   
+    
+    <p style="text-align: center;padding-top: 1.5%;"> <a  href="https://github.com/azmeena1311/Smart-Hospital-analysis" target="_blank"><img height="30px" src="https://image.flaticon.com/icons/png/512/25/25231.png"/></a> </p>
+  </div>
+</footer>
+
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+
+      <script>window.jQuery || document.write('<script src="../assets/js/vendor/jquery.slim.min.js"><\/script>')</script>
+
+      <script src="{{ url_for('static',filename='js/bootstrap.bundle.min.js')}} "></script>
+</html>
